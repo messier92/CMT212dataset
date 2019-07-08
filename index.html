@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Sets the viewport, link required stylesheets for CSS, give title-->
+   	<meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <title>C1868149 CMT212 COURSEWORK 2</title> <!--Set home page title -->
+</head>
+
+<header>  <!--Start of header-->
+<div class="container_banner"> 
+<h1 class="container_banner_text">The unhealthiest Burger per nutrition</h1>
+</div>
+</header>
+
+<!--Use flexboxes - each row will have a label and 4 graphs 
+(label, cal-salt, cal-sugar, cal-fat, cal-satfat)
+(salt-cal, label, salt-sugar, salt-fat, salt-satfat)
+(sugar-cal, sugar-salt, label, sugar-fat, sugar-satfat)
+(fat-cal, fat-salt, fat-sugar, label, fat-satfat)
+(satfat-cal, satfat-salt, satfat-sugar, satfat-fat, label) -->
+
+
+<body> <!--Start of body-->
+<div class="flex-container"> 
+    <div class="column-scatter">
+		<div id = "loli_datavizcal" class = "lollipop"></div>
+	</div>
+	<div class="column-scatter">
+		<div id = "scatterplot_datavizcalsalt" class = "scatterplot"></div>
+	</div>
+	<div class="column-scatter">
+		<div id = "scatterplot_datavizcalsugar" class = "scatterplot"></div>
+	</div>
+	<div class="column-scatter">
+		<div id = "scatterplot_datavizcalfat" class = "scatterplot"></div>
+	</div>
+	<div class="column-scatter">
+		<div id = "scatterplot_datavizcalsatfat" class = "scatterplot"></div>
+	</div>
+</div> <!--Close flex container 1-->
+
+<div class="flex-container">
+	<div class="column-scatter"> 
+		<div id = "scatterplot_datavizsaltcal"></div>
+	</div>
+    <div class="column-scatter">
+		<div id = "loli_datavizsalt" class = "lollipop"></div>
+	</div>
+	<div class="column-scatter"> 
+		<div id = "scatterplot_datavizsaltsugar"></div>
+	</div>
+	<div class="column-scatter"> 
+		<div id = "scatterplot_datavizsaltfat"></div>
+	</div>
+	<div class="column-scatter"> 
+		<div id = "scatterplot_datavizsaltsatfat"></div>
+	</div>
+</div>
+
+<div class="flex-container">
+	<div class="column-scatter"> 
+		<div id = "scatterplot_datavizsugarcal"></div>
+	</div>
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizsugarsalt"></div>
+	</div>
+	<div class="column-scatter">
+		<div id = "loli_datavizsugar" class = "lollipop"></div>
+	</div>
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizsugarfat"></div>
+	</div>
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizsugarsatfat"></div>
+	</div>
+</div>
+
+<div class="flex-container">
+	<div class="column-scatter"> 
+		<div id = "scatterplot_datavizfatcal"></div>
+	</div>
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizfatsalt"></div>
+	</div> 
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizfatsugar"></div>
+	</div>
+	<div class="column-scatter">
+		<div id = "loli_datavizfat" class = "lollipop"></div>
+	</div>
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizfatsatfat"></div>
+	</div>
+</div>
+
+<div class="flex-container">
+	<div class="column-scatter"> 
+		<div id = "scatterplot_datavizsatfatcal"></div>
+	</div>
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizsatfatsalt"></div>
+	</div> 
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizsatfatsugar"></div>
+	</div>
+	<div class = "column-scatter">
+		<div id = "scatterplot_datavizsatfatfat"></div>
+	</div>
+	<div class="column-scatter">
+		<div id = "loli_datavizsatfat" class = "lollipop"></div>
+	</div>
+</div>
+
+<div class="container_banner"> 
+<h1 class="container_banner_text">Comparing a Burger's Nutritional Value against the Reference Intake</h1>
+</div>
+
+<!--Create new flex container row for comparing the Recommended Nutrition Intake-->
+<div class="flex-container-rni">
+<div class="column-rni-sel"> 
+  <div class="column-rni-indv">
+    <img src="imgs/kfcfilletburger.png" id="kfcfilletburger" value = "1" onclick="choose(this);"></img>
+  	<img src="imgs/kfcfillettowerburger.png" id="kfcfillettowerburger" value = "2" onclick="choose(this);"></img>
+  	<img src="imgs/kfczingerburger.png"id="kfczingerburger" value = "3" onclick="choose(this);" ></img>
+  	<img src="imgs/kfczingertowerburger.png" id="kfczingertowerburger" value = "4" onclick="choose(this);"></img>
+  	<img src="imgs/kfcminifilletburger.png"id="kfcminifilletburger" value = "5" onclick="choose(this);"></img>
+  	<img src="imgs/kfcthedaddyburger.png" id="kfcthedaddyburger" value = "6" onclick="choose(this);" ></img>
+  	<img src="imgs/kfcbaconandcheeseburger.png" id="kfcbaconandcheeseburger" value = "7" onclick="choose(this);"></img>
+  	<img src="imgs/kfczingerstackerburger.png" id="kfczingerstackerburger" value = "8" onclick="choose(this);" ></img>
+  </div>
+  <div class="column-rni-indv">
+    <img src="imgs/mcdnewyorkstack.png" id="mcdnewyorkstack" value = "9" onclick="choose(this);"></img>
+  	<img src="imgs/mcdmississippistack.png" id="mcdmississippistack" value = "10" onclick="choose(this);"></img>
+  	<img src="imgs/mcdsouthcarolinastack.png" id="mcdsouthcarolinastack" value = "11" onclick="choose(this);"></img>
+  	<img src="imgs/mcdkansascitystack.png" id="mcdkansascitystack" value = "12" onclick="choose(this);"></img>
+  	<img src="imgs/mcdnashvillechicken.png" id="mcdnashvillechicken" value = "13" onclick="choose(this);"></img>
+  	<img src="imgs/mcdalabamachicken.png" id="mcdalabamachicken" value = "14" onclick="choose(this);"></img>
+  	<img src="imgs/mcdsignatureclassic.png" id="mcdsignatureclassic" value = "15" onclick="choose(this);"></img>
+  	<img src="imgs/mcdsignaturebbq.png" id="mcdsignaturebbq" value = "16" onclick="choose(this);"></img>
+  	<img src="imgs/mcdsignaturespicy.png" id="mcdsignaturespicy" value = "17" onclick="choose(this);"></img>
+  	<img src="imgs/mcdbigmac.png" id="mcdbigmac" value = "18" onclick="choose(this);"></img>
+  </div>
+  <div class="column-rni-indv">
+  	<img src="imgs/mcdquarterpounderwithcheese.png" id="mcdquarterpoundercheese" value = "19" onclick="choose(this);"></img>
+  	<img src="imgs/mcddoublecheeseburger.png" id="mcddblecheeseburger" value = "20" onclick="choose(this);"></img>
+  	<img src="imgs/mcdbacondoublecheeseburger.png" id="mcdbacondblecheeseburger" value = "21" onclick="choose(this);"></img>
+    <img src="imgs/mcdcheeseburger.png" id="mcdcheeseburger" value = "22" onclick="choose(this);"></img>
+  	<img src="imgs/mcdhamburger.png" id="mcdhamburger" value = "23" onclick="choose(this);"></img>
+  	<img src="imgs/mcdchickenlegendcoolmayo.png" id="mcdclcoolmayo" value = "24" onclick="choose(this);"></img>
+  	<img src="imgs/mcdchickenlegendbbq.png" id="mcdclbbq" value = "25" onclick="choose(this);"></img>
+  	<img src="imgs/mcdchickenlegendhotandspicymayo.png" id="mcdclhotspicymayo" value = "26" onclick="choose(this);"></img>
+  	<img src="imgs/mcdmcchickensandwich.png"id="mcdchickensandwich" value = "27" onclick="choose(this);"></img>
+  	<img src="imgs/mcdmayochicken.png" id="mcdmayochicken" value = "28" onclick="choose(this);"></img>
+  </div>
+  <div class="column-rni-indv">
+  	<img src="imgs/mcdfiletofish.png" id="mcdfiletofish" value = "29" onclick="choose(this);"></img>
+  	<img src="imgs/mcdvegetabledeluxe.png" id="mcdvegetable" value = "30" onclick="choose(this);"></img>
+  </div>
+  <div class="column-rni-indv">
+  	<img src="imgs/bksmokyblackangus.png" id="bksmokyblackangus" value = "31" onclick="choose(this);"></img>
+  	<img src="imgs/bkwhoppersandwich.png" id="bkwhopper" value = "32" onclick="choose(this);"></img>
+  	<img src="imgs/bkbacondoublexl.png" id="bkbacondoublexl" value = "33" onclick="choose(this);"></img>
+  	<img src="imgs/bktexasbbqking.png"id="bktexasbbqking" value = "34" onclick="choose(this);"></img>
+  	<img src="imgs/bkdoublewhoppersandwich.png"id="bkdoublewhopper" value = "35" onclick="choose(this);"></img>
+  	<img src="imgs/bkbaconking.png" id="bkbaconking" value = "36" onclick="choose(this);"></img>
+  	<img src="imgs/bkwesternbbqbacon.png" id="bkwesternbbqbacon" value = "37" onclick="choose(this);"></img>
+  	<img src="imgs/bkbigkingxl.png" id="bkbigkingxl" value = "38" onclick="choose(this);"></img>
+  	<img src="imgs/bklongbigking.png" id="bklongbigking" value = "39" onclick="choose(this);"></img>
+  	<img src="imgs/bklongtexasbbq.png" id="bklongtexasbbq" value = "40" onclick="choose(this);"></img>
+  </div>
+  <div class="column-rni-indv">
+  	<img src="imgs/bkdoublecheeseburger.png" id="bkdlecheeseb" value = "41" onclick="choose(this);"></img>
+  	<img src="imgs/bkcheeseburger.png" id="bkcheeseb" value = "42" onclick="choose(this);"></img>
+  	<img src="imgs/bkbacondoublecheeseburger.png" id="bkbacondoublecheeseb" value = "43" onclick="choose(this);"></img>
+  	<img src="imgs/bkhamburger.png"id="bkhamburger" value = "44" onclick="choose(this);"></img>
+  	<img src="imgs/bkwhopperjrsandwich.png" id="bkwhopperjr" value = "45" onclick="choose(this);"></img>
+  	<img src="imgs/bkkidscheeseburger.png" id="bkkidscheeseb" value = "46" onclick="choose(this);"></img>
+  	<img src="imgs/bkkidshamburger.png" id="bkkidshamb" value = "47" onclick="choose(this);"></img>
+  	<img src="imgs/bktexasbbqcrispychicken.png" id="bktexasbbqcrispyc" value = "48" onclick="choose(this);"></img>
+  	<img src="imgs/bkcrispychicken.png" id="bkcrispc" value = "49" onclick="choose(this);"></img>
+  	<img src="imgs/bkcrispychickenbaconking.png" id="bkcrispcbacon" value = "50" onclick="choose(this);"></img>
+  </div>
+  <div class="column-rni-indv">
+  	<img src="imgs/bkbaconcheesechickenroyale.png" id="bkbaconcheesecr" value = "51" onclick="choose(this);"></img>
+  	<img src="imgs/bkchickenroyale.png" id="bkchro" value = "52" onclick="choose(this);"></img>
+  	<img src="imgs/bkchickensandwich.png" id="bkchsw" value = "53" onclick="choose(this);"></img>
+  	<img src="imgs/bkkingfish.png" id="bkfish" value = "54" onclick="choose(this);"></img>
+  	<img src="imgs/bkveggiebeanburger.png" id="bkveggiebean" value = "55" onclick="choose(this);"></img>
+  	<img src="imgs/bkkidsveggieburger.png" id="bkkidsveggie" value = "56" onclick="choose(this);"></img>
+  </div>
+	<form id = "selgenderageburger">
+	<select id="gender-dropdown">
+		<option value="notsel">Please select the gender</option>
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+	</select>
+    <br>
+    <br>
+	<select id="age-dropdown">
+		<option value="notsel">Please select the age band</option>
+		<option value="1114">11-14</option>
+		<option value="1518">15-18</option>
+		<option value="1964">19-64</option>
+	</select> 
+	<br>
+	<br>
+	<select id="burger-dropdown">
+		<option value="notsel">Please select a burger</option>
+	</select>
+	<br>
+	<br>
+	     <button type="submit" id="submitgenderageburger">Submit</button> 
+	 </form>
+</div>
+
+<div class="column-rni-charts"> 
+	<div class="column-rni-mini"><h3>Calories</h3><div id = "barchart_datavizcal"></div><div id = "caltext"></div></div>
+	<div class="column-rni-mini"><h3>Salt</h3><div id = "barchart_datavizsalt"></div><div id = "salttext"></div></div>
+	<div class="column-rni-mini"><h3>Sugar</h3><div id = "barchart_datavizsugar"></div><div id = "sugartext"></div></div>
+	<div class="column-rni-mini"><h3>Fat</h3><div id = "barchart_datavizfat"></div><div id = "fattext"></div></div>
+	<div class="column-rni-mini"><h3>Saturated Fat</h3><div id = "barchart_datavizsatfat"></div><div id = "satfattext"></div></div>
+</div>
+
+</div>
+
+<div class="container_banner"> 
+<h1 class="container_banner_text">Classifying Burgers by Layers and Ingredients</h1>
+</div>
+
+<div class="flex-container-tree">
+		<div id = "tree"></div>
+</div>
+
+</body> <!--Close the body-->
+
+<footer> <!--Start of footer-->
+	<h1 class = "footnotes"><u>FOOTNOTES</u></h1>
+	<h3 class = "footnotes">This visualisation is NOT made for mobile responsiveness and should be viewed using a laptop or desktop.</h3>
+	<br>
+	<h3 class = "footnotes">The Recommended Intake values for a specific gender and age band in Part 2 are based on the author's calculations of the guidelines provided by the British Nutritional Foundation at https://www.nutrition.org.uk/attachments/article/234/Nutrition%20Requirements_Revised%20Oct%202016.pdf</h3>
+	<br>
+	<h3 class = "footnotes">The name of the burgers used in the dataset for this visualisation are obtained from the following websites on 4/5/2019: </h3>
+    <h3 class="footnotes">KFC: https://www.kfc.co.uk/our-food/for-one/burgers</h3>
+    <h3 class="footnotes">McDonalds: https://www.mcdonalds.com/gb/en-gb/menu/burgers.html</h3>
+	<h3 class = "footnotes">Burger King: https://www.burgerking.co.uk/menu/flame-grilled-burgers, https://www.burgerking.co.uk/menu/crispy-tender-chicken, https://www.burgerking.co.uk/menu/veggie-fish-salad</h3>
+	<br>
+	<h3 class="footnotes">*"Vegetable", in this context, refers to food items such as "Vegetable Patties", "Hashbrowns", "Onion Rings", and the likes. This does NOT include common vegetables found in all burgers, such as "Lettuce" or "Tomatoes".</h3>
+	<br>
+	<h3 class="footnotes">All content found here are purely for informational purposes only and is not intended to be a substitute for professional dietary/nutrition advice.</h3>
+</footer>
+
+
+<!-- JavaScript part -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="js/d3cal.js"></script>
+<script src="js/d3salt.js"></script>
+<script src="js/d3sugar.js"></script>
+<script src="js/d3fat.js"></script>
+<script src="js/d3satfat.js"></script>
+<script src="js/d3rni.js"></script>
+<script src="js/d3tree.js"></script>
+
+
+
+</html>
+<!--END OF HTML-->
